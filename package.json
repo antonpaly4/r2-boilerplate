@@ -1,0 +1,50 @@
+{
+  "name": "r2-boilerplate",
+  "version": "1.0.0",
+  "description": "React/Redux boilerplate with Babel, Stylus, Gulp and Webpack",
+  "main": "server.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "keywords": [
+    "React",
+    "Redux",
+    "Webpack",
+    "Babel",
+    "Boilerplate"
+  ],
+  "author": "Anton Paly4",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-css": "^0.1.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-stream": "0.0.2",
+    "gulp-stylus": "^2.5.0",
+    "gulp-util": "^3.0.7",
+    "nib": "^1.1.0",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "classnames": "^2.2.5",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.6.0",
+    "redux": "^3.5.2",
+    "underscore": "^1.8.3",
+    "winston": "^2.2.0"
+  }
+}
