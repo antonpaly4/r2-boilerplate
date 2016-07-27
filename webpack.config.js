@@ -3,7 +3,7 @@
 var path = require('path')
   , webpack = require('webpack');
 
-var staticPath = path.resolve(__dirname, 'source')
+var staticPath = path.resolve(__dirname, 'src')
   , buildPath = path.resolve(__dirname, 'build')
   , vendorPath = path.join(__dirname, 'node_modules');
 

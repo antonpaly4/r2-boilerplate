@@ -14,15 +14,15 @@ var gulp = require('gulp')
   , webpackConfig = require('./webpack.config');
 
 gulp.task('default', ['stylus', 'css', 'imagemin', 'fonts', 'webpack'], function() {
-  gulp.watch('./source/stylus/**/*.styl', ['stylus']);
-  gulp.watch('./source/css/*.css', ['css']);
-  gulp.watch('./source/img/**/*', ['imagemin']);
-  gulp.watch('./source/fonts/*', ['fonts']);
-  gulp.watch('./source/js/**/*.*', ['webpack']);
+  gulp.watch('./src/stylus/**/*.styl', ['stylus']);
+  gulp.watch('./src/css/*.css', ['css']);
+  gulp.watch('./src/img/**/*', ['imagemin']);
+  gulp.watch('./src/fonts/*', ['fonts']);
+  gulp.watch('./src/js/**/*.*', ['webpack']);
 });
 
 gulp.task('stylus', function(){
-  gulp.src('./source/stylus/*.styl')
+  gulp.src('./src/stylus/*.styl')
     .pipe(stylus({
       use: nib()
     }))
@@ -36,7 +36,7 @@ gulp.task('stylus', function(){
 });
 
 gulp.task('css', function(){
-  gulp.src('./source/css/*.css')
+  gulp.src('./src/css/*.css')
     .pipe(css())
     .on('error', gutil.log)
     .pipe(concat('vendor.css'))
@@ -45,12 +45,12 @@ gulp.task('css', function(){
 });
 
 gulp.task('fonts', function(){
-  return gulp.src('./source/fonts/*')
+  return gulp.src('./src/fonts/*')
     .pipe(gulp.dest('./build/fonts'));
 });
 
 gulp.task('imagemin', function(){
-  gulp.src(['./source/img/**/*'])
+  gulp.src(['./src/img/**/*'])
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     .pipe(gulp.dest('./build/img'));
 });
